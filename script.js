@@ -1,4 +1,3 @@
-document.getElementById("score-container")
 let userSCore = document.getElementById("your-score");
 let computerSCore = document.getElementById("computer-score");
 const resultMessageContainer = document.getElementById("result-message-container");
