@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Rock Paper & Scissor</title>
+</head>
+<body>
+
+    <main class="container" id="container">
+        <div class="header">
+            <h1>Rock Paper & Scissors</h1>
+
+        </div>
+
+        <div class="score-container">
+            <div class="user-score">
+                <h2>Your Score</h2>
+                <h2 id="your-score">0</h2>
+            </div>
+
+            <div class="computer-score">
+                <h2>Computer Score</h2>
+                <h2 id="computer-score">0</h2>
+            </div>
+            
+
+        </div>
+
+        <div id="result-container">
+            <div id="reload">
+                <div id="result-image">
+                    <div id="user-images">
+                        <img src="user-rock.jpg" alt="" id="user-rock">
+                        <img src="user-paper.jpg" alt="" id="user-paper">
+                        <img src="user-scissors.jpg" alt="" id="user-scissors">
+                        <p id="user">You</p>
+    
+                    </div>
+    
+                    <div id="computer-images">
+                        <img src="computer-rock.jpg" alt="" id="computer-rock">
+                        <img src="computer-paper.jpg" alt="" id="computer-paper">
+                        <img src="computer-scissors.jpg" alt="" id="computer-scissors">
+                        <p id="computer">Computer</p>
+    
+                    </div>
+    
+                    
+                </div>
+            </div>
+
+            
+        
+        </div>
+
+        <div id="result-message-container">
+            <div id="result-message">
+                <p id="whoever-wins"></p>
+
+
+                <p onclick="restartGame()" class="restartGame">
+                    <i class="fa-regular fa-circle-play"></i>
+                    Play again!</p>
+            </div>
+        </div>
+
+
+        <div class="userChoice">
+            <button onclick="showRock()">Rock
+                <i class="fa-solid fa-hand-fist"></i>
+            </button>
+
+            <button onclick="showPaper()">Paper
+                <i class="fa-solid fa-hand"></i>
+            </button>
+
+            <button onclick="showScissors()">Scissors
+                <i class="fa-solid fa-hand-scissors"></i>
+            </button>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
