@@ -63,7 +63,7 @@ function showPaper(){
         userSCore.textContent = usercount;
     }
     else if (computerFinalChoice === computerPaper){
-        resultMessage.textContent = `Draw`
+        resultMessage.textContent = `Draw`;
     }
 
     else if(computerFinalChoice === computerScissors){
@@ -93,11 +93,11 @@ function showScissors(){
     }
 
     else if(computerFinalChoice === computerScissors){
-        resultMessage.textContent = `Draw`
+        resultMessage.textContent = `Draw`;
     }
 }
 
 function restartGame(){
     resultMessageContainer.style.display = "none"; 
-    location.reload(true)
+    location.reload(true);
 }
