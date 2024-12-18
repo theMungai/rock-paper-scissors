@@ -45,6 +45,7 @@ body{
 #your-score, #computer-score{
     text-align: center;
     padding: 15px 0px;
+    font-size: 4rem;
 }
 
 #result-container{
