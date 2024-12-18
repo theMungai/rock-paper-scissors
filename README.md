@@ -34,6 +34,7 @@ Your score will be updated after each round.
 File Structure:
 
 rock-paper-scissors/
+
 ├── index.html      
 ├── styles.css        
 └── script.js         
