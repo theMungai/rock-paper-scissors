@@ -28,3 +28,22 @@ function displayImages(images){
         container.appendChild(img);
     });
 }
+
+
+
+function randomMove(){
+    const randomNumber = Math.random();
+    let computerMove = "";
+    
+    if(random >= 0 && randomNumber < 1/3){
+        computerMove = "Rock"
+    }
+    else if(randomNumber >= 1/3 && randomNumber < 2/3){
+        computerMove = "Paper"
+    }
+    else if (randomNumber >= 2/3 && randomNumber < 1 ){
+        computerMove = "Scissors"
+    }
+    
+}
+computerMove()
