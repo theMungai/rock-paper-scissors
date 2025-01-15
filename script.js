@@ -27,8 +27,9 @@ function displayImages(images){
         popupDialog.style.display = "block"
         const img = document.createElement("img");
             img.src = images[4].path;  
-
             displayContainer.appendChild(img);
+            randomMove()
+            playerGame(images[4].path)
     
     });
 
@@ -37,8 +38,9 @@ function displayImages(images){
         popupDialog.style.display = "block"
         const img = document.createElement("img");
             img.src = images[3].path;  
-
             displayContainer.appendChild(img);
+            randomMove()
+            playerGame(images[3].path)
     
     });
 
@@ -47,8 +49,9 @@ function displayImages(images){
         popupDialog.style.display = "block"
         const img = document.createElement("img");
             img.src = images[5].path;  
-
             displayContainer.appendChild(img);
+            randomMove()
+            playerGame(images[5].path)
     
     });
 
@@ -57,80 +60,88 @@ function displayImages(images){
         let computerMove = "";
         
         if(randomNumber >= 0 && randomNumber < 1/3){
-            computerMove = images[1]
+            computerMove = images[1].path
         }
         else if(randomNumber >= 1/3 && randomNumber < 2/3){
-            computerMove = images[0]
+            computerMove = images[0].path
         }
         else if (randomNumber >= 2/3 && randomNumber < 1 ){
-            computerMove = images[2]
+            computerMove = images[2].path
         }
         
     }
-
-    randomMove()
-}
-
-function playerGame(playerMove){
-    const computerMove = randomMove()
-
-    let results = ""
-    if(playerMove === "Rock"){
-        if(computerMove === images[1])
-        {
-            results = "Tie"
-        }
-
-        else if(computerMove === images[0])
-        {
-            results = "Computer Wins"
-        }
-        else if(computerMove === images[2])
-        {
-            results = "You win"
-        }
-
-        console.log(results)
-    }
     
-    else if(playerMove === "Paper")
-    {
-        if(computerMove === images[1])
-        {
-            results = "You win"
-        }
-
-        else if(computerMove === images[0])
-        {
-            results = "Tie"
-        }
-
-        else if(computerMove === images[2])
-        {
-            results = "Computer wins"
-        }
-    }
     
-    else if(playerMove === "Scissors")
-    {
-        if(computerMove === images[1])
-        {
-            results = "Computer wins"
+    const winnerMessage = document.querySelector("#whoever-wins");
+    function playerGame(playerMove){
+        const computerMove = randomMove()
+    
+        let results = ""
+        if(playerMove === images[4].path){
+            if(computerMove === images[1].path)
+            {
+                results = "Tie"
+                winnerMessage.textContent = results
+            }
+    
+            else if(computerMove === images[0].path)
+            {
+                results = "Computer Wins"
+                winnerMessage.textContent = results
+            }
+            else if(computerMove === images[2].path)
+            {
+                results = "You win"
+                winnerMessage.textContent = results
+            }
+    
+            console.log(results)
         }
-
-        else if(computerMove === images[0])
+        
+        else if(playerMove === images[3].path)
         {
-            results = "You win"
+            if(computerMove === images[1].path)
+            {
+                results = "You win"
+                winnerMessage.textContent = results
+            }
+    
+            else if(computerMove === images[0].path)
+            {
+                results = "Tie"
+                winnerMessage.textContent = results
+            }
+    
+            else if(computerMove === images[2].path)
+            {
+                results = "Computer wins"
+                winnerMessage.textContent = results
+            }
         }
-
-        else if(computerMove === images[2])
+        
+        else if(playerMove === images[5].path)
         {
-            results = "Tie"
+            if(computerMove === images[1].path)
+            {
+                results = "Computer wins"
+                winnerMessage.textContent = results
+            }
+    
+            else if(computerMove === images[0].path)
+            {
+                results = "You win"
+                winnerMessage.textContent = results
+            }
+    
+            else if(computerMove === images[2].path)
+            {
+                results = "Tie"
+                winnerMessage.textContent = results
+            }
         }
     }
+
 }
-
-
 
 document.querySelector(".restartGame").addEventListener("click", () => {
     window.location.reload(true)
