@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 2px solid red;
+    /* outline: 2px solid red; */
 }
 
 body{
@@ -55,13 +55,11 @@ body{
     margin: 0px auto;
     height: 40vh;
     position: relative;
-    border: 5px solid;
 }
 
 #result-container img{
-    width: 150px;
+    width: 200px;
     margin: 30px 20px;
-    /* display: none; */
 }
 
 #result-image{

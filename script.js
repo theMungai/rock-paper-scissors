@@ -19,14 +19,14 @@ function displayImages(images){
     const displayContainer = document.querySelector("#result-container");
     displayContainer.innerHTML = ""
    
+    const popupDialog = document.querySelector("#result-message-container");
+    
     // Handling Buttons when clicked
     const rockButton = document.querySelector(".user-rock");
     rockButton.addEventListener("click", () => {
-
+        popupDialog.style.display = "block"
         const img = document.createElement("img");
             img.src = images[4].path;  
-            img.alt = images[4].name; 
-            img.title = images[4].name; 
 
             displayContainer.appendChild(img);
     
@@ -34,11 +34,9 @@ function displayImages(images){
 
     const paperButton = document.querySelector(".user-paper");
     paperButton.addEventListener("click", () => {
-
+        popupDialog.style.display = "block"
         const img = document.createElement("img");
             img.src = images[3].path;  
-            img.alt = images[3].name; 
-            img.title = images[3].name; 
 
             displayContainer.appendChild(img);
     
@@ -46,11 +44,9 @@ function displayImages(images){
 
     const scissorsButton = document.querySelector(".user-scissors");
     scissorsButton.addEventListener("click", () => {
-
+        popupDialog.style.display = "block"
         const img = document.createElement("img");
             img.src = images[5].path;  
-            img.alt = images[5].name; 
-            img.title = images[5].name; 
 
             displayContainer.appendChild(img);
     
@@ -131,6 +127,7 @@ function randomMove(){
 }
 randomMove()
 
-
-
+document.querySelector(".restartGame").addEventListener("click", () => {
+    window.location.reload(true)
+})
 
