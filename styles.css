@@ -136,65 +136,65 @@ body{
 /* =============Mobile device ====================== */
 @media (max-width:480px){
 
-body{
-    overflow: hidden;
-}
-.header{
-    padding: 10px 0px;
-    width: 100%;   
-}
+    body{
+        overflow: hidden;
+    }
+    .header{
+        padding: 10px 0px;
+        width: 100%;   
+    }
 
-.header h1 {
-    font-size: 1.2rem;
-}
+    .header h1 {
+        font-size: 1.2rem;
+    }
 
-.score-container{
-    width: 100%;
-    padding: 5px 0px;
-    font-size: 0.7rem;
-}
+    .score-container{
+        width: 100%;
+        padding: 5px 0px;
+        font-size: 0.7rem;
+    }
 
-#your-score, #computer-score{
-    padding: 5px 0px;
-}
+    #your-score, #computer-score{
+        padding: 5px 0px;
+    }
 
-#result-container{
-    width: 100%;
-    height: 20vh;
-}
+    #result-container{
+        width: 100%;
+        height: 20vh;
+    }
 
 
-#result-image img{
-    width: 100px;
-    padding: 10px 0px;
-}
+    #result-image img{
+        width: 100px;
+        padding: 10px 0px;
+    }
 
-#result-image p{
-    font-size: 1rem;
-}
-#result-message{
-    font-size: 1rem;
-    padding: 80px 0px;
-    margin: 25px 0px;
-    top: 70%;
-}
+    #result-image p{
+        font-size: 1rem;
+    }
+    #result-message{
+        font-size: 1rem;
+        padding: 80px 0px;
+        margin: 25px 0px;
+        top: 70%;
+    }
 
-.userChoice{
-    width: 100%;
-    justify-content:center;
-    column-gap: 0.9rem;
-    margin: 10px auto;
-}
+    .userChoice{
+        width: 100%;
+        justify-content:center;
+        column-gap: 0.9rem;
+        margin: 10px auto;
+    }
 
-.userChoice button{
-    font-size: 0.9rem;
-    padding: 10px 20px;
-}
+    .userChoice button{
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
 
-.userChoice .fa-solid{
-    display: inline;
-    font-size: 1rem;
-}
+    .userChoice .fa-solid{
+        display: inline;
+        font-size: 1rem;
+    }
 
 }
 

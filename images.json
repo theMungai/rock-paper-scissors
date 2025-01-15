@@ -1,0 +1,40 @@
+{
+    "images": [
+      {
+        "id": 1,
+        "name": "computer-paper.jpg",
+        "path": "images/computer-paper.jpg"
+      },
+      {
+        "id": 2,
+        "name": "computer-rock.jpg",
+        "path": "images/computer-rock.jpg"
+      },
+      {
+        "id": 3,
+        "name": "computer-scissors.jpg",
+        "path": "images/computer-scissors.jpg"
+      },
+      {
+        "id": 4,
+        "name": "user-paper.jpg",
+        "path": "images/user-paper.jpg"
+      },
+      {
+        "id": 5,
+        "name": "user-rock.jpg",
+        "path": "images/user-rock.jpg"
+      },
+      {
+        "id": 6,
+        "name": "user-scissors.jpg",
+        "path": "images/user-scissors.jpg"
+      },
+      {
+        "id": 7,
+        "name": "water-rock-sticks.jpg",
+        "path": "images/water-rock-sticks.jpg"
+      }
+    ]
+  }
+  
