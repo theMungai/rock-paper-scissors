@@ -51,6 +51,24 @@ function displayImages(images){
             displayContainer.appendChild(img);
     
     });
+
+    function randomMove(){
+        const randomNumber = Math.random();
+        let computerMove = "";
+        
+        if(randomNumber >= 0 && randomNumber < 1/3){
+            computerMove = images[1]
+        }
+        else if(randomNumber >= 1/3 && randomNumber < 2/3){
+            computerMove = images[0]
+        }
+        else if (randomNumber >= 2/3 && randomNumber < 1 ){
+            computerMove = images[2]
+        }
+        
+    }
+
+    randomMove()
 }
 
 function playerGame(playerMove){
@@ -58,34 +76,36 @@ function playerGame(playerMove){
 
     let results = ""
     if(playerMove === "Rock"){
-        if(computerMove === "Rock")
+        if(computerMove === images[1])
         {
             results = "Tie"
         }
 
-        else if(computerMove === "Paper")
+        else if(computerMove === images[0])
         {
             results = "Computer Wins"
         }
-        else if(computerMove === "Scissors")
+        else if(computerMove === images[2])
         {
             results = "You win"
         }
+
+        console.log(results)
     }
     
     else if(playerMove === "Paper")
     {
-        if(computerMove === "Rock")
+        if(computerMove === images[1])
         {
             results = "You win"
         }
 
-        else if(computerMove === "Paper")
+        else if(computerMove === images[0])
         {
             results = "Tie"
         }
 
-        else if(computerMove === "Scissors")
+        else if(computerMove === images[2])
         {
             results = "Computer wins"
         }
@@ -93,39 +113,24 @@ function playerGame(playerMove){
     
     else if(playerMove === "Scissors")
     {
-        if(computerMove === "Rock")
+        if(computerMove === images[1])
         {
             results = "Computer wins"
         }
 
-        else if(computerMove === "Paper")
+        else if(computerMove === images[0])
         {
             results = "You win"
         }
 
-        else if(computerMove === "Scissors")
+        else if(computerMove === images[2])
         {
             results = "Tie"
         }
     }
 }
 
-function randomMove(){
-    const randomNumber = Math.random();
-    let computerMove = "";
-    
-    if(randomNumber >= 0 && randomNumber < 1/3){
-        computerMove = "Rock"
-    }
-    else if(randomNumber >= 1/3 && randomNumber < 2/3){
-        computerMove = "Paper"
-    }
-    else if (randomNumber >= 2/3 && randomNumber < 1 ){
-        computerMove = "Scissors"
-    }
-    
-}
-randomMove()
+
 
 document.querySelector(".restartGame").addEventListener("click", () => {
     window.location.reload(true)
