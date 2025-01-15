@@ -16,16 +16,44 @@ function fetchJSONData(){
 fetchJSONData()
 
 function displayImages(images){
-    const userContainer = document.querySelector("#user-images");
-    userContainer.innerHTML = ""
-    images.forEach(image => {
-        
-        const img = document.createElement("img");
-        img.src = image.path;  
-        img.alt = image.name; 
-        img.title = image.name; 
+    const displayContainer = document.querySelector("#result-container");
+    displayContainer.innerHTML = ""
+   
+    // Handling Buttons when clicked
+    const rockButton = document.querySelector(".user-rock");
+    rockButton.addEventListener("click", () => {
 
-        container.appendChild(img);
+        const img = document.createElement("img");
+            img.src = images[4].path;  
+            img.alt = images[4].name; 
+            img.title = images[4].name; 
+
+            displayContainer.appendChild(img);
+    
+    });
+
+    const paperButton = document.querySelector(".user-paper");
+    paperButton.addEventListener("click", () => {
+
+        const img = document.createElement("img");
+            img.src = images[3].path;  
+            img.alt = images[3].name; 
+            img.title = images[3].name; 
+
+            displayContainer.appendChild(img);
+    
+    });
+
+    const scissorsButton = document.querySelector(".user-scissors");
+    scissorsButton.addEventListener("click", () => {
+
+        const img = document.createElement("img");
+            img.src = images[5].path;  
+            img.alt = images[5].name; 
+            img.title = images[5].name; 
+
+            displayContainer.appendChild(img);
+    
     });
 }
 
@@ -90,7 +118,7 @@ function randomMove(){
     const randomNumber = Math.random();
     let computerMove = "";
     
-    if(random >= 0 && randomNumber < 1/3){
+    if(randomNumber >= 0 && randomNumber < 1/3){
         computerMove = "Rock"
     }
     else if(randomNumber >= 1/3 && randomNumber < 2/3){
@@ -101,4 +129,8 @@ function randomMove(){
     }
     
 }
-computerMove()
+randomMove()
+
+
+
+

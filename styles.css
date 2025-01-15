@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: 2px solid red;
 }
 
 body{
@@ -54,6 +55,13 @@ body{
     margin: 0px auto;
     height: 40vh;
     position: relative;
+    border: 5px solid;
+}
+
+#result-container img{
+    width: 150px;
+    margin: 30px 20px;
+    /* display: none; */
 }
 
 #result-image{
@@ -78,7 +86,7 @@ body{
 #result-message-container{
     width: 100%;
     height: 100vh;
-    background-color: #3333339d;
+    background-color: #0000009d;
     display: none;
     position: fixed;
     top: 50%;
